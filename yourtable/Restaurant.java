@@ -101,18 +101,6 @@ public class Restaurant {
         return result;
     }
 
-    // deletes a table by table number for the resturant
-    public boolean deleteTable(int tableNo) {
-        for (int i = 0; i < numTables; i++) {
-            if (tableList[i].getTableNo() == tableNo) {
-                for (int j = i; j < numTables - 1; j++)
-                    tableList[j] = tableList[j + 1];
-                tableList[--numTables] = null;
-                return true;
-            }
-        }
-        return false;
-    }
 
     // returns available tables byyy type
     public Table[] getAvailableByType(int preference) {
