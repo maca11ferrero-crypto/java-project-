@@ -4,9 +4,9 @@ public class Restaurant {
     private String restaurantName;
     private int numTables;
     private int numReservations;
-    // array of 50 tables as per UML (Composition: tables cannot exist without restaurant)
+    // Composition
     private Table[] tableList = new Table[50];
-    // array of reservations (Composition: reservations belong to restaurant)
+    // array of reservations (Composition: 
     private Reservation[] reservations = new Reservation[50];
 
     public Restaurant(String restaurantName, int numTables) {
