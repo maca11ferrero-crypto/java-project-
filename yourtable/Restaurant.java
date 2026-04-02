@@ -114,7 +114,7 @@ public class Restaurant {
         return false;
     }
 
-    // returns available tables filtered by type (1=Outside, 2=Inside, 3=Partitions)
+    // returns available tables byyy type
     public Table[] getAvailableByType(int preference) {
         int count = 0;
         for (int i = 0; i < numTables; i++) {
