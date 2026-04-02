@@ -4,9 +4,9 @@ public class Restaurant {
     private String restaurantName;
     private int numTables;
     private int numReservations;
-    // Composition
+    // Aggregation relationn
     private Table[] tableList = new Table[50];
-    // array of reservations (Composition: 
+    // Composition relation
     private Reservation[] reservations = new Reservation[50];
 
     public Restaurant(String restaurantName, int numTables) {
