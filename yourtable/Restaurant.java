@@ -15,7 +15,7 @@ public class Restaurant {
         this.numReservations = 0;
     }
 
-    // adds a table to the restaurant
+    // adds table method
     public boolean addTable(Table t) {
         if (numTables < tableList.length) {
             tableList[numTables++] = t;
@@ -24,7 +24,7 @@ public class Restaurant {
         return false;
     }
 
-    // adds a reservation to the restaurant
+    // adds a reservation method
     public boolean addReservation(Reservation r) {
         if (numReservations < reservations.length) {
             reservations[numReservations++] = r;
@@ -33,7 +33,7 @@ public class Restaurant {
         return false;
     }
 
-    // cancels a reservation by ID and table number
+    // cancels by ID and table number
     public boolean cancelReservation(String id, int tableNo) {
         Reservation r = searchReservation(id, tableNo);
         if (r != null) {
@@ -43,7 +43,7 @@ public class Restaurant {
         return false;
     }
 
-    // searches for a reservation by ID and table number
+    // searches by ID and table number
     public Reservation searchReservation(String id, int tableNo) {
         for (int i = 0; i < numReservations; i++) {
             if (reservations[i].getId().equals(id)
@@ -53,7 +53,7 @@ public class Restaurant {
         return null;
     }
 
-    // searches for a table by table number
+    // searches  by table number
     public Table searchTable(int tableNo) {
         for (int i = 0; i < numTables; i++) {
             if (tableList[i].getTableNo() == tableNo)
@@ -62,7 +62,7 @@ public class Restaurant {
         return null;
     }
 
-    // returns all Inside tables — as per UML
+    // returns all Inside tables 
     public Inside[] getInsideTables() {
         int count = 0;
         for (int i = 0; i < numTables; i++)
@@ -75,7 +75,7 @@ public class Restaurant {
         return result;
     }
 
-    // returns all Outside tables — as per UML
+    // returns all Outside tables
     public Outside[] getOutsideTables() {
         int count = 0;
         for (int i = 0; i < numTables; i++)
@@ -88,7 +88,7 @@ public class Restaurant {
         return result;
     }
 
-    // returns all available tables — as per UML
+    // returns all available 
     public Table[] getAllAvailable() {
         int count = 0;
         for (int i = 0; i < numTables; i++)
@@ -101,7 +101,7 @@ public class Restaurant {
         return result;
     }
 
-    // deletes a table by table number — as per UML
+    // deletes a table by table number for the resturant
     public boolean deleteTable(int tableNo) {
         for (int i = 0; i < numTables; i++) {
             if (tableList[i].getTableNo() == tableNo) {
